@@ -17,16 +17,10 @@ module.exports = class EyesOpen {
         
     config.addBrowsers(
             { name: BrowserType.CHROME, width: 820, height: 600 },
-            { name: BrowserType.CHROME, width: 350, height: 768 },
-            { name: BrowserType.CHROME, width: 350, height: 1200 },
-            { name: BrowserType.FIREFOX, width: 350, height: 768 },
-            { name: BrowserType.FIREFOX, width: 1440, height: 1200 },
-            { name: BrowserType.EDGE_CHROMIUM, width: 1440, height: 1200 },
-            { name: BrowserType.SAFARI, width: 350, height: 768 },
-            { name: BrowserType.SAFARI, width: 1440, height: 1200 }
+            // { name: BrowserType.CHROME, width: 350, height: 768 },
     )
     config.setApiKey(process.env.APPLITOOLS_API_KEY);
-    let batchName = `Nightwatch test: ${new Date().toLocaleString().split(',')[0]}`
+    let batchName = `nightwatch_${new Date().toLocaleString().split(',')[0]}`
     let batchInfo = new BatchInfo(batchName);
     batchInfo.setId(batchName);
 
@@ -37,5 +31,7 @@ module.exports = class EyesOpen {
     
     await eyes.open(this.client.api, appName, testName, viewportSize);
 
+
   }
 }
+
