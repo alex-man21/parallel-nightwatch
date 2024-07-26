@@ -29,4 +29,3 @@
 npm install "@applitools/eyes-nightwatch" --save-dev
 
 ```
-# parallel-nightwatch
