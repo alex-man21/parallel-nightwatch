@@ -40,12 +40,13 @@ module.exports = {
     "enabled": true,
     "workers": "3"
   },
-
+  persist_globals: true,
   webdriver: {},
   // custom_commands_path:  'node_modules/@applitools/eyes-nightwatch/commands',
   test_settings: {
     default: {
       launch_url: 'https://www.google.com/',
+      persist_globals: true,
       disable_error_log: false,
       screenshots: {
         enabled: false,
